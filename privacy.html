@@ -1,32 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Music System Worker D</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; }
-        .updated { color: #666; font-size: 0.9em; }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Music System</title>
+<meta name="description" content="Privacy Policy for Music System, an analytics and release-scheduling product for independent music creators." />
+<style>
+  :root {
+    --bg: #0b0b0f;
+    --bg-soft: #14141c;
+    --fg: #f5f5f7;
+    --fg-dim: #a8a8b3;
+    --accent: #ff3a6e;
+    --accent-soft: #ff6f9c;
+    --border: #23232e;
+    --max: 820px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-soft); text-decoration: none; }
+  a:hover { color: var(--accent); }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 24px;
+    background: rgba(11,11,15,0.92);
+    backdrop-filter: blur(8px);
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--fg);
+  }
+  .logo-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(255,58,110,0.18);
+  }
+  nav a {
+    margin-left: 18px;
+    color: var(--fg-dim);
+    font-size: 14px;
+  }
+  nav a:hover { color: var(--fg); }
+  main { max-width: var(--max); margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 38px; letter-spacing: -0.01em; margin: 0 0 8px; }
+  .updated { color: var(--fg-dim); font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 22px; margin: 36px 0 10px; letter-spacing: -0.005em; }
+  h3 { font-size: 17px; margin: 22px 0 6px; color: var(--fg); }
+  p, li { color: #d8d8df; font-size: 15.5px; }
+  ul { padding-left: 22px; }
+  ul li { margin-bottom: 6px; }
+  .lede { font-size: 17px; color: var(--fg-dim); margin-bottom: 28px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 8px;
+    font-size: 14.5px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    color: #d8d8df;
+  }
+  th { background: var(--bg-soft); color: var(--fg); }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 24px;
+    color: var(--fg-dim);
+    font-size: 13px;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-links a { margin-left: 18px; color: var(--fg-dim); }
+  .footer-links a:hover { color: var(--fg); }
+</style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: April 13, 2026</p>
-    <h2>1. Overview</h2>
-    <p>Music System Worker D is a personal content distribution tool operated by Andrew Liew. This privacy policy explains how the application handles data in connection with social media platform integrations.</p>
-    <h2>2. Data Collection</h2>
-    <p>This application does not collect, store, or process personal data from any third-party users. The application is used solely by its owner to distribute original music content. The only data handled is: OAuth authentication tokens required for platform API access (stored locally, never transmitted to third parties), original music content metadata (titles, descriptions, tags) created by the operator, and platform response data (post IDs, URLs) for record-keeping purposes.</p>
-    <h2>3. Data Storage</h2>
-    <p>All data is stored locally on the operator's personal computer. No cloud databases, external servers, or third-party storage services are used. Authentication credentials are stored in local JSON files and are never committed to version control or shared.</p>
-    <h2>4. Third-Party Services</h2>
-    <p>This application integrates with TikTok, YouTube, and Facebook APIs solely for the purpose of publishing original music content. The application accesses only the minimum required API scopes for content posting. No user data is read from these platforms beyond what is necessary for the posting workflow.</p>
-    <h2>5. Data Sharing</h2>
-    <p>No data is shared with third parties. The application does not use analytics services, advertising networks, or data brokers.</p>
-    <h2>6. Data Retention</h2>
-    <p>Authentication tokens are retained locally until manually revoked or expired. Content posting records are retained locally for the operator's personal record-keeping.</p>
-    <h2>7. Contact</h2>
-    <p>For questions about this privacy policy, contact: activesunandrew@gmail.com</p>
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><span class="logo-dot"></span> Music System</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <div class="updated">Last updated: 2026-05-01</div>
+
+  <p class="lede">This Privacy Policy explains what information Music System (&#8220;Music System&#8221;, &#8220;we&#8221;, &#8220;us&#8221;) collects when you use the product, how we use that information, who we share it with, and the choices you have over your data. Music System is an analytics and release-scheduling product for independent music creators.</p>
+
+  <h2>1. What information we collect</h2>
+  <p>Music System collects only the information needed to provide the analytics and scheduling features you request.</p>
+
+  <h3>1.1 Information you provide directly</h3>
+  <ul>
+    <li><strong>Beta access requests:</strong> if you submit your email through the beta access form on our homepage, we collect that email solely to contact you about beta availability.</li>
+    <li><strong>Content you upload:</strong> if you use the scheduling feature, you provide a video file, caption, hashtags, and a publish time.</li>
+  </ul>
+
+  <h3>1.2 Information collected through TikTok&#8217;s API</h3>
+  <p>When you authorize Music System through TikTok&#8217;s Login Kit, the data we receive depends on the scopes you approve at the consent screen. The table below describes each scope and the data it provides.</p>
+  <table>
+    <thead>
+      <tr><th>Scope</th><th>Data Music System receives</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>user.info.basic</td><td>Your TikTok open_id and a stable identifier</td><td>To identify the authenticated creator after OAuth.</td></tr>
+      <tr><td>user.info.profile</td><td>Display name, avatar URL, profile link, bio, verified status</td><td>To label the dashboard correctly for the connected creator.</td></tr>
+      <tr><td>user.info.stats</td><td>Aggregate stats: follower count, following count, likes count, video count</td><td>To show top-line dashboard tiles.</td></tr>
+      <tr><td>video.list</td><td>List of your public videos and engagement metrics (views, likes, comments, shares)</td><td>To power per-song performance views and cross-release comparison.</td></tr>
+      <tr><td>video.upload</td><td>Required for uploading a video file to your TikTok account as a draft</td><td>To support the scheduling feature.</td></tr>
+      <tr><td>video.publish</td><td>Required for publishing uploaded content to your TikTok profile</td><td>To support direct-publish scheduling.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>1.3 Information collected automatically</h3>
+  <p>When you visit the Music System website, our hosting provider may log standard request metadata (IP address, user agent, timestamp). This information is used for security and basic site availability, not for tracking or advertising. The website does not use third-party tracking, advertising, or analytics scripts.</p>
+
+  <h2>2. How we use information</h2>
+  <p>We use the information we collect to:</p>
+  <ul>
+    <li>Provide the analytics dashboard and scheduling features you have authorized.</li>
+    <li>Authenticate your TikTok account and maintain your session.</li>
+    <li>Respond to your beta access request or support questions.</li>
+    <li>Maintain the security and reliability of the service.</li>
+    <li>Comply with applicable law and TikTok&#8217;s Developer Terms of Service.</li>
+  </ul>
+  <p>We do not sell your personal information. We do not use your data for advertising or for training third-party models. We do not use Music System to access TikTok accounts other than the one you have authorized.</p>
+
+  <h2>3. How we share information</h2>
+  <p>We share information only as needed to operate the product and only with the categories of recipients listed below.</p>
+  <ul>
+    <li><strong>TikTok:</strong> when you connect your account, we exchange tokens and content with TikTok&#8217;s API as required to deliver the scheduling and analytics features.</li>
+    <li><strong>Infrastructure providers:</strong> we use cloud and hosting providers to run Music System; these providers process data on our behalf under standard data processing terms.</li>
+    <li><strong>Legal authorities:</strong> we may disclose information if required by valid legal process or to protect the rights, safety, or property of Music System, our creators, or the public.</li>
+  </ul>
+
+  <h2>4. Data retention</h2>
+  <p>We retain TikTok access and refresh tokens for as long as you remain connected to Music System, and we retain analytics data we have fetched on your behalf so the dashboard can show historical trends. If you revoke Music System&#8217;s access from your TikTok account settings, or you ask us to delete your data, we will delete your tokens and your stored analytics within a reasonable period (typically within 30 days), subject to legal retention obligations.</p>
+
+  <h2>5. Your choices and rights</h2>
+  <ul>
+    <li><strong>Disconnect at any time:</strong> revoke Music System&#8217;s access from your TikTok account settings. Once revoked, Music System immediately stops accessing your TikTok data.</li>
+    <li><strong>Access, correction, deletion:</strong> contact us to request a copy of the data we hold about you, to correct it, or to delete it.</li>
+    <li><strong>Beta email:</strong> reply &#8220;unsubscribe&#8221; to any message we send and we will remove your email from the beta list.</li>
+  </ul>
+
+  <h2>6. Security</h2>
+  <p>We use industry-standard practices to protect data, including TLS in transit and encryption of OAuth tokens at rest. No system is perfectly secure. If we become aware of a breach affecting your information, we will notify affected creators and applicable authorities as required by law.</p>
+
+  <h2>7. International transfers</h2>
+  <p>Music System operates globally and your information may be processed in countries other than the one you reside in. Where required, we rely on lawful transfer mechanisms (such as standard contractual clauses) for cross-border data transfers.</p>
+
+  <h2>8. Children&#8217;s privacy</h2>
+  <p>Music System is not intended for children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. The &#8220;Last updated&#8221; date at the top of the page reflects the most recent revision. Material changes will be highlighted on the homepage or communicated to connected creators.</p>
+
+  <h2>10. Contact</h2>
+  <p>Privacy questions, data access requests, or deletion requests can be sent to <a href="mailto:activesunandrew@gmail.com">activesunandrew@gmail.com</a>.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>&copy; 2026 Music System. Built for independent music creators.</div>
+    <div class="footer-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:activesunandrew@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

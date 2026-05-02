@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Music System — Analytics & Scheduling for Independent Music Creators</title>
+<meta name="description" content="Music System is an analytics and scheduling product for independent music creators. Measure how your songs perform on TikTok, schedule releases, and learn what your audience responds to." />
+<meta property="og:title" content="Music System — Analytics & Scheduling for Independent Music Creators" />
+<meta property="og:description" content="Measure how your songs perform on TikTok and schedule releases — built for independent music creators." />
+<meta property="og:url" content="https://activesun1982.github.io/music-system-pages/" />
+<meta property="og:type" content="website" />
+<style>
+  :root {
+    --bg: #0b0b0f;
+    --bg-soft: #14141c;
+    --fg: #f5f5f7;
+    --fg-dim: #a8a8b3;
+    --accent: #ff3a6e;
+    --accent-soft: #ff6f9c;
+    --border: #23232e;
+    --max: 1100px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-soft); text-decoration: none; }
+  a:hover { color: var(--accent); }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 24px;
+    position: sticky;
+    top: 0;
+    background: rgba(11,11,15,0.92);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(255,58,110,0.18);
+  }
+  nav a {
+    margin-left: 22px;
+    color: var(--fg-dim);
+    font-size: 14px;
+  }
+  nav a:hover { color: var(--fg); }
+  main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .hero {
+    padding: 96px 0 72px;
+    text-align: left;
+  }
+  .hero h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p.lede {
+    font-size: 20px;
+    color: var(--fg-dim);
+    max-width: 680px;
+    margin: 0 0 32px;
+  }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,58,110,0.32); color: #fff; }
+  .btn-secondary {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--fg); }
+  section { padding: 64px 0; border-top: 1px solid var(--border); }
+  section h2 {
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+  }
+  section p.section-lede {
+    color: var(--fg-dim);
+    font-size: 17px;
+    max-width: 720px;
+    margin: 0 0 36px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+  .card p {
+    color: var(--fg-dim);
+    margin: 0;
+    font-size: 15px;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(255,58,110,0.12);
+    color: var(--accent-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  ol.flow {
+    counter-reset: step;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  ol.flow li {
+    counter-increment: step;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 14px;
+    position: relative;
+  }
+  ol.flow li::before {
+    content: counter(step);
+    position: absolute;
+    top: -14px;
+    left: 22px;
+    background: var(--accent);
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  ol.flow li h4 { margin: 0 0 6px; font-size: 16px; }
+  ol.flow li p { margin: 0; color: var(--fg-dim); font-size: 14px; }
+  .signup-card {
+    background: linear-gradient(135deg, rgba(255,58,110,0.16), rgba(255,111,156,0.06));
+    border: 1px solid rgba(255,58,110,0.3);
+    border-radius: 16px;
+    padding: 36px;
+  }
+  .signup-card h2 { margin-top: 0; }
+  form.signup {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  form.signup input[type=email] {
+    flex: 1 1 280px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--border);
+    color: var(--fg);
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  form.signup input[type=email]:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  form.signup button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  form.signup button:hover { background: var(--accent-soft); }
+  .form-note { color: var(--fg-dim); font-size: 13px; margin-top: 12px; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    color: var(--fg-dim);
+    font-size: 13px;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-links a { margin-left: 18px; color: var(--fg-dim); }
+  .footer-links a:hover { color: var(--fg); }
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 38px; }
+    .hero p.lede { font-size: 17px; }
+    nav a { margin-left: 14px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="logo"><span class="logo-dot"></span> Music System</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#access">Get access</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="border: none; padding-top: 96px;">
+    <span class="badge">Private beta · independent music creators</span>
+    <h1>Measure your music.<br/>Schedule your releases. <span>Grow on TikTok.</span></h1>
+    <p class="lede">Music System is an analytics and release-scheduling product built for independent music creators. Connect your TikTok account, see how each song actually performs, and schedule new releases with confidence.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#access">Request beta access</a>
+      <a class="btn btn-secondary" href="#features">See features</a>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>Built around two jobs creators actually do</h2>
+    <p class="section-lede">Independent music creators have two repetitive problems: figuring out which songs and audiences are working, and getting new releases out on a steady cadence. Music System covers both.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Per-song performance dashboard</h3>
+        <p>See views, likes, comments, shares, and follower growth for every song you publish. Sort by best-performing, weakest, fastest-rising. Compare release weeks side by side.</p>
+      </div>
+      <div class="card">
+        <h3>Audience signal, not vanity metrics</h3>
+        <p>Music System surfaces leading indicators — completion rate, save rate, week-over-week velocity — so you understand which song actually resonated, not just which one happened to trend.</p>
+      </div>
+      <div class="card">
+        <h3>Release scheduling for TikTok</h3>
+        <p>Plan your release calendar in one view. Queue up videos for upload as drafts on your authorized TikTok account, then publish on the cadence you set.</p>
+      </div>
+      <div class="card">
+        <h3>Cross-release learning</h3>
+        <p>The product looks across your full catalog and tells you what your audience reliably responds to: tempo, mood, length, hook placement.</p>
+      </div>
+      <div class="card">
+        <h3>Original content only</h3>
+        <p>Music System is for creators publishing their own original music. We do not host third-party content, and we do not republish anyone else's work.</p>
+      </div>
+      <div class="card">
+        <h3>Creator owns their data</h3>
+        <p>Each connected creator authorizes their own TikTok account through TikTok's official Login Kit. Tokens stay scoped to that creator. You can disconnect at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <h2>How Music System works</h2>
+    <p class="section-lede">Each creator who joins the beta connects their own TikTok account through the standard TikTok Login Kit OAuth flow. Music System never touches accounts you don't authorize.</p>
+    <ol class="flow">
+      <li>
+        <h4>Connect your TikTok</h4>
+        <p>Sign in with TikTok. We use Login Kit and request only the scopes needed for analytics and scheduling.</p>
+      </li>
+      <li>
+        <h4>We pull your public metrics</h4>
+        <p>Music System reads your published video list and engagement stats so the dashboard reflects your real performance.</p>
+      </li>
+      <li>
+        <h4>You schedule releases</h4>
+        <p>Drop in a video file, set a caption and hashtags, pick a publish time. Music System uploads it to your TikTok via the Content Posting API.</p>
+      </li>
+      <li>
+        <h4>Iterate from data</h4>
+        <p>Each new release gets compared against your catalog — so the next one is informed, not guessed.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="who">
+    <h2>Who Music System is for</h2>
+    <p class="section-lede">Music System is built for independent music creators publishing original songs to their own TikTok account. It is not a media-management agency tool, not a posting tool for brand accounts, and not a way to manage someone else's content.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Indie singer-songwriters</h3>
+        <p>Solo artists releasing original tracks who want to know which song landed and which one didn't.</p>
+      </div>
+      <div class="card">
+        <h3>Producers releasing original beats</h3>
+        <p>Producers who post their own beats and instrumentals as TikTok-native short videos.</p>
+      </div>
+      <div class="card">
+        <h3>Bedroom artists building a catalog</h3>
+        <p>Creators who release on a regular cadence and want a single place to plan and measure it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="access">
+    <div class="signup-card">
+      <h2>Private beta — request access</h2>
+      <p>Music System is currently in private beta with a small group of independent music creators. We're onboarding new creators as TikTok production access expands. Drop your email and we'll reach out when a slot opens up.</p>
+      <form class="signup" action="mailto:activesunandrew@gmail.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <button type="submit">Request access</button>
+      </form>
+      <p class="form-note">By requesting access you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <section id="trust">
+    <h2>Compliance & trust</h2>
+    <p class="section-lede">Music System integrates with TikTok through TikTok's official Login Kit and Content Posting API. We follow TikTok's Developer Terms of Service and only request the scopes our features require.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Standards we follow</h3>
+        <p>OAuth 2.0 with PKCE for desktop login. Scopes requested only when needed. Tokens stored encrypted at rest, scoped to each creator.</p>
+      </div>
+      <div class="card">
+        <h3>What we never do</h3>
+        <p>Music System never posts to a TikTok account we are not explicitly authorized for. We do not scrape, we do not impersonate, and we do not publish anyone else's content.</p>
+      </div>
+      <div class="card">
+        <h3>Disconnect any time</h3>
+        <p>A creator can revoke Music System's access from their TikTok account settings. Once revoked, we stop pulling metrics and clear stored tokens.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>&copy; 2026 Music System. Built for independent music creators.</div>
+    <div class="footer-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:activesunandrew@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

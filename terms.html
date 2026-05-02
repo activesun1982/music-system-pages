@@ -1,30 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Music System Worker D</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; }
-        .updated { color: #666; font-size: 0.9em; }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service — Music System</title>
+<meta name="description" content="Terms of Service for Music System, an analytics and release-scheduling product for independent music creators." />
+<style>
+  :root {
+    --bg: #0b0b0f;
+    --bg-soft: #14141c;
+    --fg: #f5f5f7;
+    --fg-dim: #a8a8b3;
+    --accent: #ff3a6e;
+    --accent-soft: #ff6f9c;
+    --border: #23232e;
+    --max: 820px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-soft); text-decoration: none; }
+  a:hover { color: var(--accent); }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 24px;
+    background: rgba(11,11,15,0.92);
+    backdrop-filter: blur(8px);
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--fg);
+  }
+  .logo-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(255,58,110,0.18);
+  }
+  nav a {
+    margin-left: 18px;
+    color: var(--fg-dim);
+    font-size: 14px;
+  }
+  nav a:hover { color: var(--fg); }
+  main { max-width: var(--max); margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 38px; letter-spacing: -0.01em; margin: 0 0 8px; }
+  .updated { color: var(--fg-dim); font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 22px; margin: 36px 0 10px; letter-spacing: -0.005em; }
+  h3 { font-size: 17px; margin: 22px 0 6px; color: var(--fg); }
+  p, li { color: #d8d8df; font-size: 15.5px; }
+  ul { padding-left: 22px; }
+  ul li { margin-bottom: 6px; }
+  .lede { font-size: 17px; color: var(--fg-dim); margin-bottom: 28px; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 24px;
+    color: var(--fg-dim);
+    font-size: 13px;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-links a { margin-left: 18px; color: var(--fg-dim); }
+  .footer-links a:hover { color: var(--fg); }
+</style>
 </head>
 <body>
-    <h1>Terms of Service</h1>
-    <p class="updated">Last updated: April 13, 2026</p>
-    <h2>1. Service Description</h2>
-    <p>Music System Worker D is a personal content distribution tool that automates the posting of original music content to social media platforms including TikTok, YouTube, and Facebook. This tool is operated by Andrew Liew for the purpose of distributing original music created and owned by the operator.</p>
-    <h2>2. Use of Service</h2>
-    <p>This application is a personal tool used solely by its owner to distribute original music content. It is not available for public use or third-party access. All content distributed through this service is original work owned by the operator.</p>
-    <h2>3. Content Ownership</h2>
-    <p>All music content distributed through this service is original work. The operator retains full ownership of all content. No user-generated content from third parties is collected, stored, or distributed.</p>
-    <h2>4. Platform Compliance</h2>
-    <p>This service operates in compliance with the terms of service and API usage policies of all integrated platforms, including TikTok, YouTube, and Facebook. The service respects rate limits, content policies, and authentication requirements of each platform.</p>
-    <h2>5. Limitation of Liability</h2>
-    <p>This service is provided as-is for personal use. The operator assumes no liability for platform availability, API changes, or content distribution delays.</p>
-    <h2>6. Contact</h2>
-    <p>For questions about these terms, contact: activesunandrew@gmail.com</p>
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><span class="logo-dot"></span> Music System</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Terms of Service</h1>
+  <div class="updated">Last updated: 2026-05-01</div>
+
+  <p class="lede">These Terms of Service ("Terms") govern your access to and use of Music System ("Music System", "we", "us", "our"), an analytics and release-scheduling product for independent music creators. By accessing or using Music System, you agree to be bound by these Terms.</p>
+
+  <h2>1. The product</h2>
+  <p>Music System is a software product that helps independent music creators understand how their original songs perform on TikTok and schedule new releases to their own authorized TikTok account. Music System is currently in private beta. Access is granted on a per-creator basis.</p>
+
+  <h2>2. Eligibility and account</h2>
+  <p>To use Music System you must be at least the age of majority in your jurisdiction (and at least 13 years old in any case), and you must own the rights to any music or video content you upload, schedule, or publish through the product. You are responsible for the accuracy of information you provide to Music System and for keeping your account credentials secure.</p>
+
+  <h2>3. TikTok integration and authorization</h2>
+  <p>Music System integrates with TikTok through TikTok&#8217;s official Login Kit and Content Posting API. To use Music System with your TikTok account you authorize Music System through TikTok&#8217;s OAuth flow. By doing so, you grant Music System the scopes you approve at the consent screen, which may include:</p>
+  <ul>
+    <li><strong>user.info.basic</strong> &#8212; identifies the authenticated TikTok account.</li>
+    <li><strong>user.info.profile</strong> &#8212; reads display name, avatar, and verified status.</li>
+    <li><strong>user.info.stats</strong> &#8212; reads your account-level stats (followers, likes, video count).</li>
+    <li><strong>video.list</strong> &#8212; reads your public videos and their engagement metrics.</li>
+    <li><strong>video.upload</strong> &#8212; uploads a video file to your TikTok account as a draft.</li>
+    <li><strong>video.publish</strong> &#8212; publishes uploaded content to your authorized TikTok account.</li>
+  </ul>
+  <p>You may revoke Music System&#8217;s access from your TikTok account settings at any time. Doing so immediately stops Music System from accessing your TikTok data.</p>
+
+  <h2>4. Acceptable use</h2>
+  <p>You agree to use Music System only for the purpose for which it is offered, and only with content you own or are authorized to publish. In particular, you agree:</p>
+  <ul>
+    <li>Not to use Music System to publish content that infringes third-party rights or violates applicable law.</li>
+    <li>Not to attempt to access or control any TikTok account other than the one you have authorized.</li>
+    <li>Not to misuse the TikTok integration to spam, scrape, impersonate, or harass.</li>
+    <li>Not to reverse-engineer, scrape, or interfere with the operation of Music System.</li>
+  </ul>
+  <p>Music System reserves the right to suspend or terminate access for any creator who violates these Terms or TikTok&#8217;s Developer Terms of Service.</p>
+
+  <h2>5. Intellectual property</h2>
+  <p>You retain all rights to the music, video files, captions, hashtags, and other content you upload through Music System. By using the product, you grant Music System a limited, revocable license to process and transmit that content solely as needed to provide the analytics and scheduling features you request. Music System claims no ownership over your content.</p>
+
+  <h2>6. Service availability</h2>
+  <p>Music System is provided on an &#8220;as is&#8221; and &#8220;as available&#8221; basis. We do not guarantee uninterrupted availability, and the product may be updated, paused, or discontinued at any time, particularly during the private beta phase.</p>
+
+  <h2>7. Disclaimer of warranties</h2>
+  <p>To the maximum extent permitted by law, Music System disclaims all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the product will meet your requirements or that operation of the product will be error-free.</p>
+
+  <h2>8. Limitation of liability</h2>
+  <p>To the maximum extent permitted by law, Music System and its operators will not be liable for any indirect, incidental, special, consequential, or exemplary damages, including loss of profits, goodwill, data, or other intangible losses, arising out of or in connection with your use of the product.</p>
+
+  <h2>9. Third-party services</h2>
+  <p>Music System depends on TikTok&#8217;s APIs and your continued authorization. Your use of TikTok is governed by TikTok&#8217;s own Terms of Service, Community Guidelines, and Privacy Policy. Music System is not responsible for the actions, availability, or policies of TikTok or any other third-party service.</p>
+
+  <h2>10. Changes to these Terms</h2>
+  <p>We may update these Terms from time to time. When we do, we will revise the &#8220;Last updated&#8221; date at the top of this page. Continued use of Music System after changes take effect constitutes acceptance of the updated Terms.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about these Terms can be sent to <a href="mailto:activesunandrew@gmail.com">activesunandrew@gmail.com</a>.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>&copy; 2026 Music System. Built for independent music creators.</div>
+    <div class="footer-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:activesunandrew@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
